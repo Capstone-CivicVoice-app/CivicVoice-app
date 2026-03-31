@@ -4,12 +4,12 @@ import { listForum, createForum, getForumDetail, createComment } from "../contro
 
 const router = express.Router();
 
-router.get("/", verifyToken, (req, res) => {
-    res.json({ message: "Forum list (dummy) "});
-});
+router.get("/", verifyToken, listForum);
 
-router.post("/", verifyToken, (req, res) => {
-    res.json({ message: "Forum post submitted (dummy) "});
-});
+router.post("/", verifyToken, createForum);
+
+router.get("/:id", verifyToken, getForumDetail);
+
+router.post("/:id/comments", verifyToken, createComment);
 
 export default router;

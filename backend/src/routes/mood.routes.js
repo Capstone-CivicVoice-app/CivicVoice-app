@@ -4,12 +4,8 @@ import { getMoodSummary, submitMood } from "../controllers/mood.controller.js";
 
 const router = express.Router();
 
-router.get("/", verifyToken, (req, res) => {
-    res.json({ message: "Mood data (dummy) "});
-});
+router.get("/", verifyToken, getMoodSummary);
 
-router.post("/", verifyToken, (req, res) => {
-    res.json({ message: "Mood submitted (dummy) "});
-});
+router.post("/", verifyToken, submitMood);
 
 export default router;

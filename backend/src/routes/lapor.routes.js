@@ -1,15 +1,15 @@
 import express from "express";
 import { verifyToken } from "../middlewares/auth.middleware.js";
-import { listLapor, createLapor, getLaporDetail, updateLaporStatus } from "../controllers/lapor.controller.js";
+import { listLapor, createLaporItem, getLaporDetail, updateLaporStatusItem } from "../controllers/lapor.controller.js";
 
 const router = express.Router();
 
-router.get("/", verifyToken, (req, res) => {
-    res.json({ message: "lapor  list (dummy) "});
-});
+router.get("/", verifyToken, listLapor);
 
-router.post("/", verifyToken, (req, res) => {
-    res.json({ message: "lapor submitted (dummy) "});
-});
+router.post("/", verifyToken, createLaporItem);
+
+router.get("/:id", verifyToken, getLaporDetail);
+
+router.put("/:id/status", verifyToken, updateLaporStatusItem);
 
 export default router;

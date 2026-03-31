@@ -4,12 +4,8 @@ import { listVoting, submitVote } from "../controllers/voting.controller.js";
 
 const router = express.Router();
 
-router.get("/", verifyToken, (req, res) => {
-    res.json({ message: "Voting data (dummy) "});
-});
+router.get("/", verifyToken, listVoting);
 
-router.post("/", verifyToken, (req, res) => {
-    res.json({ message: "Vote submitted (dummy) "});
-});
+router.post("/", verifyToken, submitVote);
 
 export default router;
