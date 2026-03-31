@@ -1,7 +1,7 @@
-const pool = require("../config/db");
+import pool from "../config/db.js";
 
 const findByEmail = async (email) => {
-    const [rows] = await pool.query("SELECT * FROM users WHERE email = ? LIMIT 1", [id]);
+    const [rows] = await pool.query("SELECT * FROM users WHERE email = ? LIMIT 1", [email]);
     return rows[0];
 };
 
@@ -20,7 +20,7 @@ const createUser = async ({name, email, passwordHash, role = "user"}) => {
     return result.insertId;
 };
 
-module.exports = {
+export default {
     findByEmail,
     findById,
     createUser

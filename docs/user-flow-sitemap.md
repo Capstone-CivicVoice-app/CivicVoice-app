@@ -1,4 +1,4 @@
-# CivicVoice - User Flow dan Sitemap (Minggu 1 / Hari Selasa)
+# CivicVoice - User Flow dan Sitemap 
 
 Tanggal: 2026-03-10  
 Tim: CC26-PS074  
