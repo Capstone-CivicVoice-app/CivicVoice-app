@@ -1,4 +1,4 @@
-import { LayoutDashboard, MessageSquare, FileText, Vote } from 'lucide-react';
+import { LayoutDashboard, MessageSquare, FileText, Vote, UserCircle } from 'lucide-react';
 
 export default function BottomNav({ activeView, onViewChange }) {
   const navItems = [
@@ -6,7 +6,7 @@ export default function BottomNav({ activeView, onViewChange }) {
     { id: 'forum', icon: MessageSquare, label: 'Forum' },
     { id: 'lapor', icon: FileText, label: 'Lapor' },
     { id: 'voting', icon: Vote, label: 'Voting' },
-    { id: 'profile', icon: FileText, label: 'Profile' },
+    { id: 'profile', icon: UserCircle, label: 'Profile' },
   ];
 
   return (
