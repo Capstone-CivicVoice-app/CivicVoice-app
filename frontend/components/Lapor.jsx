@@ -1,6 +1,3 @@
-import { FileText, Upload, Send, CheckCircle, Clock, Loader } from 'lucide-react';
-import { useState } from 'react';
-
 export default function Lapor() {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
